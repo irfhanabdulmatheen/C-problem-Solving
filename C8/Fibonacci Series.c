@@ -1,21 +1,23 @@
 #include <stdio.h>
 
-int main() 
+int main()
 
 {
-   int t1=0,t2=1,t3,n;
-  
-   scanf("%d",&n);
-  
-  t3=t1+t2;
+    int t1 = 0, t2 = 1, t3, n, i;
 
-   for(i=1;i<=n;i++)
-   {
-       printf("%d",t1);
-       t1=t2;
-       t2=t3;
-       t3=t1+t2;
-   }
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
 
-  return 0;
+    for (i = 1; i <= n; i++)
+       
+    {
+        printf("%d ", t1);  
+        t3 = t1 + t2;       
+        t1 = t2;           
+        t2 = t3;             
+    }
+    printf("\n");
+
+    return 0;
 }
+
